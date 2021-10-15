@@ -3,7 +3,8 @@
   "description": "Shows the load average and number of running processes.", 
   "name": "Load Average", 
   "shell-version": [
-    "3.26.2"
+    "3.26.2",
+    "40"
   ], 
   "url": "", 
   "uuid": "loadavg@maistrelis.com", 
