@@ -3,6 +3,7 @@ const Main    = imports.ui.main;
 const Tweener = imports.tweener.tweener;
 const GLib    = imports.gi.GLib;
 const Clutter = imports.gi.Clutter;
+const Util    = imports.misc.util;
 
 // Globals
 let button;
@@ -79,6 +80,11 @@ function init() {
 
 
 function enable() {
+
+    Util.spawn(["/home/kostas/etc/bin/xmodmap_start"]);
+    //Util.spawn(["/bin/bash", "-c",  "/home/kostas/etc/bin/xmodmap_start"]);
+    
+    
     Main.panel._rightBox.insert_child_at_index(button, 0);
     _render();
     timer = GLib.timeout_add(GLib.PRIORITY_DEFAULT, 12000, () => {
